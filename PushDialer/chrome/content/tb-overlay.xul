@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://PushDialer/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://PushDialer/locale/overlay.dtd">
+<overlay id="PushDialer-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+  <script src="tb-overlay.js"/>
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="PushDialer-strings" src="chrome://PushDialer/locale/overlay.properties" />
+  </stringbundleset>
+
+  <popup id="mailContext">
+    <menuseparator id="context-PushDialerSeparator" />
+    <menuitem id="context-PushDialer"
+              label="&PushDialerContext.label;"
+              accesskey="&PushDialerContext.accesskey;"
+              oncommand="PushDialer.onMenuItemCommand(event)" />
+  </popup>
+
+</overlay>
