@@ -22,7 +22,7 @@ var PushDialer = {
 
   sendDialRequest: function(phoneNumber)
   {
-  	var dialNumberURL = "pushdialer://" + phoneNumber;
+    var dialNumberURL = "pushdialer://" + phoneNumber;
 
     if (typeof gBrowser != "undefined")
       gBrowser.loadURI(dialNumberURL);
@@ -33,6 +33,17 @@ var PushDialer = {
   getSelection: function()
   {
     var selection;
+    var activeElement = window.content.document.activeElement;
+
+    if (activeElement.tagName == "IFRAME")
+    {
+      var inputElement = activeElement.contentDocument.querySelector("input:focus");
+      selection = inputElement.value;
+
+      if (selection.length > 0)
+        return selection;
+    }
+
 
     if (typeof getBrowserSelection != "undefined")
       selection = getBrowserSelection();

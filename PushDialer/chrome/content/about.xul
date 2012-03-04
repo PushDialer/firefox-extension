@@ -8,7 +8,7 @@
   <groupbox align="center" orient="horizontal">
     <vbox>
       <text value="PushDialer" style="font-weight: bold; font-size: x-large;"/>
-      <text value="&version; 1.7"/>
+      <text value="&version; 1.7.1-beta"/>
       <separator class="thin"/>
       <text value="&createdBy;" style="font-weight: bold;"/>
       <text value="Push Dialer, LLC"/>
